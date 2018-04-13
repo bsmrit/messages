@@ -45,7 +45,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-sm-12">
-                        <h1>PIZZA MEAT</h1>
+                        <h1>Message Entry</h1>
                         <div class="form-group">
                             <textarea class="form-control" name="message"></textarea>
                         </div>
