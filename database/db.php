@@ -25,10 +25,31 @@
         return $connection;
     }
 
+    function getMessage($id) {
+        $connection = getConnection();
+
+        $query = "SELECT body FROM messages WHERE id='$id'";
+        $results = mysqli_query($connection, $query);
+
+        if (!$results) {
+            echo 'Error retrieving records.';
+            exit;
+        }
+
+        $record = mysqli_fetch_assoc($results);
+        return $record;
+    }
+
+    function editMessage($id, $message) {
+        $connection = getConnection();
+
+        // PUT THE UPDATE QUERY HERE!!!
+    }
+
     function getMessages() {
         $connection = getConnection();
 
-        $query = 'SELECT body FROM messages';
+        $query = 'SELECT id, body FROM messages';
         $results = mysqli_query($connection, $query);
 
         if (!$results) {
